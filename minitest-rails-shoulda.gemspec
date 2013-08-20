@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "minitest-rails",    "~> 0.9.2"
   s.add_runtime_dependency "minitest-matchers", "~> 1.3.0"
-  s.add_runtime_dependency "shoulda-matchers",  "~> 1.4.1"
+  s.add_runtime_dependency "shoulda-matchers",  "~> 2.3.0"
 end
