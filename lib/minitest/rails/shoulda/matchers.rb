@@ -12,7 +12,7 @@ if defined?(ActiveRecord)
     end
   end
 
-  class MiniTest::Rails::ActiveSupport::TestCase
+  class ActiveSupport::TestCase
     include Shoulda::Matchers::ActiveRecord
   end
 end
@@ -28,7 +28,7 @@ if defined?(ActiveModel)
     end
   end
 
-  class MiniTest::Rails::ActiveSupport::TestCase
+  class ActiveSupport::TestCase
     include Shoulda::Matchers::ActiveModel
   end
 end
@@ -44,7 +44,7 @@ if defined?(ActionController)
     end
   end
 
-  class MiniTest::Rails::ActionController::TestCase
+  class ActionController::TestCase
     include Shoulda::Matchers::ActionController
   end
 end
@@ -60,7 +60,7 @@ if defined?(ActionMailer)
     end
   end
 
-  class MiniTest::Rails::ActionMailer::TestCase
+  class ActionMailer::TestCase
     include Shoulda::Matchers::ActionMailer
   end
 end

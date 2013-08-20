@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe HelloController do
 
-  context "index" do
+  describe "index" do
     setup do
       get :world
     end
@@ -18,17 +18,17 @@ describe HelloController do
     end
 
     describe "with matchers" do
-      should "give us HTML" do
+      it "give us HTML" do
         @controller.must respond_with_content_type(:html)
       end
 
-      should_eventually "give us JSON"
+      # should_eventually "give us JSON"
 
       # should_eventually "give us JSON" do
       #   @controller.must respond_with_content_type(:json)
       # end
 
-      should "not give us XML" do
+      it "not give us XML" do
         @controller.wont respond_with_content_type(:xml)
       end
     end
@@ -39,8 +39,8 @@ describe HelloController do
       it { must respond_with_content_type(:html) }
       it { wont respond_with_content_type(:xml) }
 
-      must { respond_with_content_type(:html) }
-      wont { respond_with_content_type(:xml) }
+      it { respond_with_content_type(:html) }
+      it { respond_with_content_type(:xml) }
     end
   end
 
